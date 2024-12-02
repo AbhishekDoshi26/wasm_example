@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 Stopwatch stopwatch = Stopwatch();
@@ -17,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       stopwatch.stop();
-      print('WASM App startup time: ${stopwatch.elapsedMilliseconds}ms');
+      print('Normal App startup time: ${stopwatch.elapsedMilliseconds}ms');
     });
 
     return MaterialApp(
